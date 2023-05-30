@@ -1,0 +1,20 @@
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model pariuri {
+    id        Int    @id @default(autoincrement())
+    echipa1   String
+    echipa2   String
+    cota_e1   Float
+    cota_e2   Float
+    cota_egal Float
+    sport     String
+    site      String
+}
