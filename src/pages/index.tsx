@@ -7,6 +7,13 @@ export const getServerSideProps: GetServerSideProps<{
   posts: pariuri[];
 }> = async () => {
   const posts = await prisma.pariuri.findMany();
+  posts.sort((a, b) => {
+    if (a.echipa1 == b.echipa1) {
+      return a.echipa2 < b.echipa2 ? -1 : 1;
+    } else {
+      return a.echipa1 < b.echipa1 ? -1 : 1;
+    }
+  });
 
   return {
     props: { posts },
