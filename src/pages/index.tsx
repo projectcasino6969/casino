@@ -1,17 +1,21 @@
-import { type NextPage } from "next";
+import { pariuri } from "@prisma/client";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import { prisma } from "~/server/db";
 
-export async function getStaticProps() {
+export const getServerSideProps: GetServerSideProps<{
+  posts: pariuri[];
+}> = async () => {
   const posts = await prisma.pariuri.findMany();
 
   return {
     props: { posts },
   };
-}
+};
 
-const Home: NextPage = (props) => {
+const Home = (
+  props: InferGetServerSidePropsType<typeof getServerSideProps>
+) => {
   console.log(props);
 
   return (
