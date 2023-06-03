@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Accordion, AccordionItem, Box , AccordionButton, ChakraProvider, AccordionPanel, AccordionIcon, Button , } from '@chakra-ui/react';
+import { Accordion, AccordionItem, Box , AccordionButton, ChakraProvider, AccordionPanel, AccordionIcon, Button, border , } from '@chakra-ui/react';
 const Pariu3params =(props:{team_1: string,team_2: string, cotaw1: number, cotad: number, cotaw2: number})=>{
     const[value, setValue] = useState(""); 
     function handle() {
@@ -9,10 +9,16 @@ const Pariu3params =(props:{team_1: string,team_2: string, cotaw1: number, cotad
       var sum3:number=val/(1+props.cotaw2/props.cotaw1+props.cotaw2/props.cotad)
       alert(sum1)
     }
-  
+    const mystyle = {
+      width: "400px",
+      color: "black",
+      fontFamily: "Arial",
+      borderradius: "25px"
+    };
       return(
         <>
-        <ChakraProvider>
+        <div style={mystyle}>
+          <ChakraProvider>
       <Accordion defaultIndex={[1]} allowMultiple>
     <AccordionItem>
       <h2>
@@ -34,7 +40,7 @@ const Pariu3params =(props:{team_1: string,team_2: string, cotaw1: number, cotad
     </AccordionItem>
   </Accordion>
         </ChakraProvider> 
-      
+        </div>    
       </>
       );
   };

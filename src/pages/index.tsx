@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps<{
   };
 };
 const verified=()=>{
-
+  
 };
 const Home = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
@@ -24,6 +24,26 @@ const Home = (
 
   return (
     <>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
     <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
     </>
     )
