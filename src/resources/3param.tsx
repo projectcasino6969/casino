@@ -10,6 +10,7 @@ const Pariu3params =(props:{team_1: string,team_2: string, cotaw1:cota, cotad:co
     const [sum2, setSum2] = useState(0);
     const [sum3, setSum3] = useState(0);
     const [display, setDisplay] = useState("none");
+    const profitabilitate=1/props.cotaw1.v+1/props.cotad.v+1/props.cotaw2.v
     const profit=Number(Math.round((props.cotaw1.v*(100/(1+props.cotaw1.v/props.cotad.v+props.cotaw1.v/props.cotaw2.v)))-100).toFixed(2));
     function handle() {
       const val=Number(value)
@@ -32,7 +33,7 @@ const Pariu3params =(props:{team_1: string,team_2: string, cotaw1:cota, cotad:co
         <AccordionButton>
           <Box as="span" flex='1' textAlign='center'>
             <text>
-              {props.team_1} x {props.team_2}: {props.cotaw1.v}-{props.cotad.v}-{props.cotaw2.v} profitabilitate de {profit}%
+              {props.team_1} x {props.team_2}: {props.cotaw1.v}-{props.cotad.v}-{props.cotaw2.v} {profitabilitate<1?"profitabil":"neprofitabil"}
             </text>
           </Box>
           <AccordionIcon />
