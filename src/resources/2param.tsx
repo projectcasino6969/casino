@@ -4,9 +4,9 @@ const Pariu2params =(props:{team_1: string,team_2: string, cotaw1: number, cotaw
     const[value, setValue] = useState(""); 
     function handle() {
         alert(value)
-        var val:number=+value
-        var sum1:number=val*props.cotaw1/props.cotaw2;
-        var sum2:number=val*props.cotaw2/props.cotaw1;
+        const val:number=+value
+        const sum1:number=val*props.cotaw1/props.cotaw2;
+        const sum2:number=val*props.cotaw2/props.cotaw1;
         return (
             <>
             <text>Here are you cotes: {sum1} - {sum2}</text>
