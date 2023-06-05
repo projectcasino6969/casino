@@ -14,9 +14,6 @@ export const getServerSideProps: GetServerSideProps<{
     props: { posts },
   };
 };
-const verified=()=>{
-  
-};
 const Home = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {

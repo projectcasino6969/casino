@@ -3,10 +3,10 @@ import { Accordion, AccordionItem, Box , AccordionButton, ChakraProvider, Accord
 const Pariu3params =(props:{team_1: string,team_2: string, cotaw1: number, cotad: number, cotaw2: number})=>{
     const[value, setValue] = useState(""); 
     function handle() {
-      let val:number=+value
-      let sum1:number=val/(1+props.cotaw1/props.cotad+props.cotaw1/props.cotaw2)
-      let sum2:number=val/(1+props.cotad/props.cotaw1+props.cotad/props.cotaw2)
-      let sum3:number=val/(1+props.cotaw2/props.cotaw1+props.cotaw2/props.cotad)
+      const val:number=+value
+      const sum1:number=val/(1+props.cotaw1/props.cotad+props.cotaw1/props.cotaw2)
+      const sum2:number=val/(1+props.cotad/props.cotaw1+props.cotad/props.cotaw2)
+      const sum3:number=val/(1+props.cotaw2/props.cotaw1+props.cotaw2/props.cotad)
       alert(sum1)
     }
     const mystyle = {
