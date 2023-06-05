@@ -3,7 +3,8 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 import React from "react";
 import { prisma } from "~/server/db";
-import { Accordion, AccordionItem, Box , AccordionButton, ChakraProvider, AccordionPanel, AccordionIcon , } from '@chakra-ui/react';
+import Pariu3params from "~/resources/3param";
+import Pariu2params from "~/resources/2param";
 export const getServerSideProps: GetServerSideProps<{
   posts: pariuri[];
 }> = async () => {
@@ -20,54 +21,39 @@ export const getServerSideProps: GetServerSideProps<{
     props: { posts },
   };
 };
-
+const verified=()=>{
+  
+};
 const Home = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {
   console.log(props);
 
   return (
-    <> 
-    <ChakraProvider>
-    <Accordion defaultIndex={[0]} allowMultiple>
-  <AccordionItem>
-    <h2>
-      <AccordionButton>
-        <Box as="span" flex='1' textAlign='left'>
-          Section 1 title
-        </Box>
-        <AccordionIcon />
-      </AccordionButton>
-    </h2>
-    <AccordionPanel pb={4}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </AccordionPanel>
-  </AccordionItem>
-
-  <AccordionItem>
-    <h2>
-      <AccordionButton>
-        <Box as="span" flex='1' textAlign='left'>
-          Section 2 title
-        </Box>
-        <AccordionIcon />
-      </AccordionButton>
-    </h2>
-    <AccordionPanel pb={4}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </AccordionPanel>
-  </AccordionItem>
-</Accordion>
-      </ChakraProvider> 
-    
+    <>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
+    <Pariu3params team_1="lala" team_2="blal" cotaw1={2} cotaw2={3} cotad={4}/>
     </>
-  );
+    )
 };
 
 export default Home;
