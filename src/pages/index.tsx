@@ -71,7 +71,7 @@ export const getServerSideProps: GetServerSideProps<{
       return a.echipa1 < b.echipa1 ? -1 : 1;
     }
   });
-  let duplicates: Pariu[] = [];
+  const duplicates: Pariu[] = [];
   let cote = {
     c1: { site: "", v: 1 },
     c2: { site: "", v: 1 },
