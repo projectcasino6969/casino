@@ -14,6 +14,7 @@ const Pariu2params =(props:{team_1: string,team_2: string, cotaw1:cota, cotaw2:c
       const val=Number(value)
       setSum1(Number((Math.round(val/(1+props.cotaw1.v/props.cotaw2.v)).toFixed(2))));
       setSum2(Number((Math.round(val/(1+props.cotaw2.v/props.cotaw1.v)).toFixed(2))));
+      if(val!=0)
       setDisplay("block");
     }
     const mystyle2 = {
@@ -21,12 +22,13 @@ const Pariu2params =(props:{team_1: string,team_2: string, cotaw1:cota, cotaw2:c
     };
       return(
         <>
-        <ChakraProvider>
+        <div className='mt-10 rounded w-2/4 border border-gray-500 rounded-full'>
+          <ChakraProvider>
       <Accordion defaultIndex={[1]} allowMultiple>
     <AccordionItem>
       <h2>
         <AccordionButton>
-          <Box as="span" flex='1' textAlign='left'>
+          <Box as="span" flex='1' textAlign='center'>
             <text>
               {props.team_1} x {props.team_2}: {props.cotaw1.v}-{props.cotaw2.v} profitabilitate de {profit}%
             </text>
@@ -35,18 +37,25 @@ const Pariu2params =(props:{team_1: string,team_2: string, cotaw1:cota, cotaw2:c
         </AccordionButton>
       </h2>
       <AccordionPanel pb={4}>
-          Introdu suma disponibila: <input value={value} onChange={(e) => {setValue(e.target.value)}} className="outline"/> 
-      <button onClick={handle} className="rounded-xl bg-brand-500 px-5 py-3 text-base font-medium text-black transition duration-200 hover:bg-brand-600 active:bg-brand-700 dark:bg-brand-400 dark:text-dark dark:hover:bg-brand-300 dark:active:bg-brand-200">
+        <center>
+           <div className="flex items-center justify-center">
+          <text className='ml-10 mt-1'>Introdu suma disponibila:</text> <input value={value} onChange={(e) => {setValue(e.target.value)}} className="h-8 ml-5 outline text-center outline-1 rounded-full outline-gray-200"/> 
+      <button onClick={handle} className="bg-cyan-500 text-white active:bg-cyan-600 font-bold uppercase text-xs px-4 py-2 rounded-full ml-6 shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
     Confirm
   </button>
-  <div id="textField" style={mystyle2}>
-  Sumele ce trebuie introduse sunt {sum1} - {sum2} pe siteurile: {props.cotaw1.site} si {props.cotaw2.site}
+  <div id="textField" style={mystyle2} className='inline'>
+    <text className='ml-5'>
+      Sumele ce trebuie introduse sunt {sum1} - {sum2} pe siteurile: {props.cotaw1.site} si {props.cotaw2.site}
+    </text>
+  
   </div>
+        </div>
+        </center>
       </AccordionPanel>
     </AccordionItem>
   </Accordion>
         </ChakraProvider> 
-      
+        </div>
       </>
       );
   };
