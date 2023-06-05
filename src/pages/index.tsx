@@ -45,6 +45,7 @@ const Home = (
       {props.pariuri.map((pariu) => {
         return (
           <Pariu3params
+            key={pariu.id}
             team_1={pariu.echipa1}
             team_2={pariu.echipa2}
             cotaw1={{ site: pariu.site, v: pariu.cota_e1 }}
