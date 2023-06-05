@@ -33,7 +33,7 @@ const Pariu3params =(props:{team_1: string,team_2: string, cotaw1:cota, cotad:co
         <AccordionButton>
           <Box as="span" flex='1' textAlign='center'>
             <text>
-              {props.team_1} x {props.team_2}: {props.cotaw1.v}-{props.cotad.v}-{props.cotaw2.v} {profitabilitate<1?"profitabil":"neprofitabil"}
+              {props.team_1} x {props.team_2}: {props.cotaw1.v}-{props.cotad.v}-{props.cotaw2.v} {profitabilitate<1?"profitabil "+profit:"neprofitabil"}
             </text>
           </Box>
           <AccordionIcon />
