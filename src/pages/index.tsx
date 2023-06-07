@@ -1,10 +1,7 @@
-import { pariuri } from "@prisma/client";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import React from "react";
 import { prisma } from "~/server/db";
 import Pariu3params from "~/resources/3param";
-import Pariu2params from "~/resources/2param";
-import { log } from "console";
 
 const profit = (c1: number, c2: number, c3: number) => {
   return c1 * (100 / (1 + c1 / c3 + c1 / c2)) - 100 >= -2;
@@ -121,9 +118,6 @@ export const getServerSideProps: GetServerSideProps<{
 const Home = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {
-  console.log(props);
-  console.log(profit(1, 4, 5));
-
   return (
     <>
       {props.pariuri.map((pariu) => {
