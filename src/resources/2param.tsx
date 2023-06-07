@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Accordion, AccordionItem, Box , AccordionButton, ChakraProvider, AccordionPanel, AccordionIcon, Button , } from '@chakra-ui/react';
+import { Accordion, AccordionItem, Box , AccordionButton, ChakraProvider, AccordionPanel, AccordionIcon, } from '@chakra-ui/react';
 type cota={
   site:string
   v:number
